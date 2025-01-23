@@ -1,3 +1,4 @@
+
 package com.projeto.dslist.dto;
 
 import org.springframework.beans.BeanUtils;
@@ -10,16 +11,13 @@ public class GameDTO {
 	private String title;
 	private Integer year;
 	private String genre;
-	private String platform;
+	private String platforms;
 	private Double score;
 	private String imgUrl;
 	private String shortDescription;
 	private String longDescription;
 	
-	public GameDTO() {
-	}
-	
-	public GameDTO(Game entity)	{
+	public GameDTO(Game entity) {
 		BeanUtils.copyProperties(entity, this);
 	}
 
@@ -55,12 +53,12 @@ public class GameDTO {
 		this.genre = genre;
 	}
 
-	public String getPlatform() {
-		return platform;
+	public String getPlatforms() {
+		return platforms;
 	}
 
-	public void setPlatform(String platform) {
-		this.platform = platform;
+	public void setPlatforms(String platforms) {
+		this.platforms = platforms;
 	}
 
 	public Double getScore() {
@@ -94,7 +92,4 @@ public class GameDTO {
 	public void setLongDescription(String longDescription) {
 		this.longDescription = longDescription;
 	}
-
-	
-
 }
